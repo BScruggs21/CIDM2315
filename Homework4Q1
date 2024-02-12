@@ -1,0 +1,14 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("The largest number is: " + FindLargestNumber(10, 20));
+    }
+
+    static int FindLargestNumber(int num1, int num2)
+    {
+        return Math.Max(num1, num2);
+    }
+}
