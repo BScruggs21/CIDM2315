@@ -1,0 +1,29 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        DrawTriangle(5, "left");
+        DrawTriangle(5, "right");
+    }
+
+    static void DrawTriangle(int N, string shape)
+    {
+        Console.WriteLine($"N = {N}, Shape = {shape}");
+
+        if (shape != "left" && shape != "right")
+        {
+            Console.WriteLine("Invalid shape!");
+            return;
+        }
+
+        for (int i = 1; i <= N; i++)
+        {
+            if (shape == "left")
+                Console.WriteLine(new string('*', i));
+            else
+                Console.WriteLine(new string(' ', N - i) + new string('*', i));
+        }
+    }
+}
